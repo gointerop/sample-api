@@ -1,0 +1,17 @@
+version: '3'
+
+services:
+  api:
+    build: .
+    command: mvn spring-boot:run
+    restart: on-failure
+    ports:
+      - "8080:8080"
+    networks:
+      - api-network
+    volumes:
+      - api-volume:/tmp/
+volumes:
+  api-volume:
+networks:
+  api-network:
