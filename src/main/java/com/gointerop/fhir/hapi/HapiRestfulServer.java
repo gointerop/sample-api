@@ -9,6 +9,7 @@ import org.springframework.stereotype.Component;
 import com.gointerop.fhir.config.CorsConfig;
 import com.gointerop.fhir.provider.CodeSystemProvider;
 import com.gointerop.fhir.provider.ConceptMapProvider;
+import com.gointerop.fhir.provider.PatientProvider;
 import com.gointerop.fhir.provider.ValueSetProvider;
 
 import ca.uhn.fhir.context.FhirContext;
@@ -37,6 +38,9 @@ public class HapiRestfulServer extends RestfulServer {
     @Autowired
     private ConceptMapProvider conceptMapProvider;
     
+    @Autowired
+    private PatientProvider patientProvider;
+    
     @Override
     protected void initialize() {
         //context
@@ -46,6 +50,7 @@ public class HapiRestfulServer extends RestfulServer {
         registerProvider(codeSystemProvider);
         registerProvider(valueSetProvider);
         registerProvider(conceptMapProvider);
+        registerProvider(patientProvider);
         
         //sintatic providers
         

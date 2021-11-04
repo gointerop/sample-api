@@ -106,10 +106,10 @@ public class ValidatorService {
         MethodOutcome retVal = new MethodOutcome();
         OperationOutcome outcome = new OperationOutcome();
         
-        if (baseResource.getMeta().getProfile().size() == 0) {
-			throw new UnprocessableEntityException("No element meta.profile was found in the resource.");
-		}
-
+        if(baseResource == null) {
+        	throw new UnprocessableEntityException("No resource was found in the request body.");
+        }
+        
         List<Exception> exceptions = new ArrayList<Exception>();
         ValidationResult validationResult = validateWithResult(baseResource);
 
