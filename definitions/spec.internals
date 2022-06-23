@@ -4,8 +4,8 @@
   "tool-version": "4.6.0",
   "tool-build": "3",
   "webUrl": "http://somewhere.org/fhir/uv/myig",
-  "date": "2021-11-04",
-  "date-time": "20211104095248-0300",
+  "date": "2022-06-22",
+  "date-time": "20220622103939-0300",
   "paths": {
     "http://somewhere.org/fhir/uv/myig/ImplementationGuide/example.fhir.uv.myig|0.2.0": "0.2.0/ImplementationGuide-example.fhir.uv.myig.html",
     "http://somewhere.org/fhir/uv/myig/ImplementationGuide/example.fhir.uv.myig": "ImplementationGuide-example.fhir.uv.myig.html",
